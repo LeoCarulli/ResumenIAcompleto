@@ -1,5 +1,5 @@
 # main.py
-from file_reader import read_file  # Importamos las funciones del archivo separado
+from lector_archivos import leer_archivo  # Importamos las funciones del archivo separado
 import subprocess
 
 # Función para generar un resumen del texto cargado usando subprocess
@@ -22,7 +22,7 @@ def generar_resumen_con_subprocess(texto):
 ruta_archivo = "data/teemo.pdf"  # Define la ruta de tu archivo aquí
 
 # Cargamos el contenido del archivo (ya sea txt, docx o pdf)
-texto = read_file(ruta_archivo)
+texto = leer_archivo(ruta_archivo)
 
 # Generamos el resumen del contenido usando subprocess
 resumen = generar_resumen_con_subprocess(texto)

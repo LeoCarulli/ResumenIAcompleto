@@ -2,28 +2,28 @@
 import pdfplumber  # Asegúrate de tener instalado pdfplumber
 from docx import Document  # Para manejar archivos Word (.docx)
 
-def read_file(file_path):
+def leer_archivo(ruta_archivo):
     """Lee un archivo PDF, DOCX o TXT y retorna su contenido en formato de texto."""
-    if file_path.endswith('.pdf'):
-        return read_pdf(file_path)
-    elif file_path.endswith('.docx'):
-        return read_docx(file_path)
-    elif file_path.endswith('.txt'):
-        return read_txt(file_path)
+    if ruta_archivo.endswith('.pdf'):
+        return leer_pdf(ruta_archivo)
+    elif ruta_archivo.endswith('.docx'):
+        return leer_docx(ruta_archivo)
+    elif ruta_archivo.endswith('.txt'):
+        return leer_txt(ruta_archivo)
     else:
         raise ValueError("Formato de archivo no soportado. Solo se aceptan PDF, DOCX y TXT.")
 
-def read_pdf(file_path):
+def leer_pdf(ruta_archivo):
     """Lee un archivo PDF y extrae su texto."""
-    with pdfplumber.open(file_path) as pdf:
+    with pdfplumber.open(ruta_archivo) as pdf:
         return '\n'.join(page.extract_text() for page in pdf.pages)
 
-def read_docx(file_path):
+def leer_docx(ruta_archivo):
     """Lee un archivo DOCX y extrae su texto."""
-    doc = Document(file_path)
+    doc = Document(ruta_archivo)
     return '\n'.join(para.text for para in doc.paragraphs)
 
-def read_txt(file_path):
+def leer_txt(ruta_archivo):
     """Lee un archivo TXT y extrae su texto."""
-    with open(file_path, 'r', encoding='utf-8') as file:
+    with open(ruta_archivo, 'r', encoding='utf-8') as file:
         return file.read()
