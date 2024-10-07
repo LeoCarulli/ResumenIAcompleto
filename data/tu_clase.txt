@@ -1,0 +1,478 @@
+vamos de nuevo.
+¿Cómo están? Buenas tardes. Bienvenidos. Bienvenidos a este curso de análisis de series temporales.
+Bueno, ya la gran mayoría nos conocemos del primer año, algunos son del presencial.
+Ahí veo algunas caras conocidas como Vector. Un gusto a Vector volverte a ver.
+Y bueno, muchos de ustedes que los conozco del virtual del año pasado.
+Esta materia me tiene a cargo junto a Sebastián Calcaño y Bradian Drago que nos van a estar acompañando.
+Ahí se va, si querés presentarte, que vos sos un emblema del curso hace años.
+Bueno, bueno, gracias Rodri. Hola, qué tal para todos.
+Bueno, mi nombre es Sebastián Calcaño.
+Estoy a cargo de la parte práctica de la materia de análisis de series temporales.
+Bueno, mi carrera de grado es actuario.
+Fui también alumno de la maestría, de la maestría de ciencia de datos en la universidad austral.
+Y bueno, vamos a acompañarlos acá por estas ocho clases y espero que les sirva, que les sea divertida
+y que saquen información para ustedes.
+Bien, bueno, ahí Sebastián se presentó.
+Bradian también forma parte del grupo, quizás alguna clase se pueda sumar.
+Nosotros les vamos a ir habilitando el material semana a semana.
+Acá comparto el campus para que ustedes tengan conocimiento, les vamos a ir compartiendo.
+No sé si pudieron ver el Geniali o el cronograma de clases, que acá ahora se los muestro
+como para que tengan una idea qué vamos a trabajar y de qué manera.
+La forma de evaluación del curso lo vamos a hacer a través de trabajos.
+Nos vamos a hacer una evaluación mediante un examen en el campus, ni un choice.
+Sino que lo que buscamos es que ustedes puedan emplear las distintas herramientas
+que vamos a estar viendo, los distintos módulos que vamos a estar viendo en series de tiempo,
+trabajando con series reales, que van a elegir ustedes.
+O sea, nosotros no les vamos a decir qué serie elegir, cada uno no va a elegir su propia aventura.
+Vamos a tener, como dijo Seba, ocho clases.
+En esta cohorte las clases sincrónicas son de tres horas.
+Desde este año la versión online cuenta con clases de cuatro horas,
+porque esa hora sincrónica pasó a ser sincrónica.
+Eso es a partir de este año, eso es alguna decisión de la dirección.
+Pero nosotros vamos a tener tres horas de clase.
+La idea es que debemos hasta la primera parte hasta el break,
+damos teoría, la voy a dar yo, y después el break va a continuar con la práctica a Seba,
+o Brian, si estuviesen en alguna clase.
+Y si fuese necesario, bueno, por ahí arranca Seba y después doy yo la teoría,
+eso lo vamos sirviendo y mechando.
+Hasta las primeras cuatro clases vamos a ver lo que se nominan los modelos clásicos,
+estadísticos de series de tiempo.
+Entonces vamos a recorrer desde conceptos básicos llegando a los modelos Arimax.
+Vamos a ver el modelo arma, ya la clase que viene.
+Vamos a ver la tercer clase, una variante que se llama el modelo Arima,
+que es cuando tiene presencia de un componente de tendencia estocástica.
+Y después vamos a ver la incorporación de la estacionalidad y de variables explicativas,
+otros regresores que le podamos incorporar al modelo.
+Ya desde la quinta clase en adelante, las últimas cuatro,
+nosotros vamos a trabajar ya con modelos de Machine Learning, Deep Learning,
+aplicado a las series de tiempo.
+Y en esta última clase vamos a trabajar con dos modelos nuevos que salieron este año,
+que son el modelo Cronos, que es un modelo de lenguaje, y TimeGPT.
+Bien, que se basa en GPT.
+Bueno, lo vamos a utilizar para la modulización de series de tiempo.
+Con lo cual el curso estaba balanceado en un 50% de modelos clásicos
+y un 50% de modelos Machine Learning.
+Bien, fuimos cambiando a lo largo de estos cuatro años.
+Cinco años, creo que estamos en la materia, ¿no?
+Se va cuatro, cinco años ya, creo que...
+Sí, como al principio.
+Sí, cuatro, cinco años.
+Y fuimos modificando bastante el cronama.
+De hecho, vamos a ver acá redes neuronales.
+Ustedes van a tener una materia adoptativa si la eligen de redes neuronales
+que viene después.
+Nosotros vamos a usar y vamos a explicarles
+cómo pueden predecir con redes neuronales en una serie de tiempo.
+Vamos a usar modelos de ensambles que ya lo vieron en otras materias,
+con lo cual nos vamos a montar en lo que ustedes ya conocen
+para predecir y forecastear series de tiempo.
+Y en la tercera clase, en la séptima clase,
+vamos a trabajar con algo que van a ver en una materia siguiente,
+que se llama Fundamentos, que lo van a ver con el profesor Marlino.
+Vamos a ver Automatix Machine Learning
+aplicado a la modelización de series de tiempo.
+Ustedes van a ver parte de esa materia,
+van a ver algo Automatix Machine Learning.
+Nosotros vamos a mostrarles cómo podemos trabajar
+con este tipo de metodología
+para predecir series temporales.
+Desde todo el pipeline de trabajo automatizado.
+Y la última tiene que ver con estos modelos nuevos
+como para estar en la frontera
+y contarles un poco qué es lo que hoy se está discutiendo.
+Esa es nuestra propuesta a nivel de cronama de clases.
+También tienen acá el programa de la materia
+que lo van a poder chupumiar, si así lo desean,
+que es un poco lo que le fui comentando,
+le fuimos comentando.
+Y nosotros vamos a evaluar con dos trabajos
+que van a ser grupales de grupos de hasta tres.
+Esto es algo que se decidió desde el año pasado,
+quizás ya lo estuvieron vivenciando en otra materia.
+Y también para nosotros va a ponderar un poco
+la participación en clases, bueno, es todo.
+Pero en definitiva lo que va a mover en amperímetro,
+como se dice, es el trabajo final.
+Lo que esperamos es que ustedes,
+las mismas series que hayan elegido
+en el primer trabajo práctico,
+que el primer trabajo práctico
+va a tener que ver con las primeras cuatro clases,
+las continúen en el trabajo final.
+Bien, esa es la idea.
+Elijan ustedes tres, cuatro series que les interesa,
+que puede ser alguna problemática de interés
+de parte del equipo,
+y que ustedes traten de aplicar
+lo que vean en las clases para modelizar
+y tratar de predecir esas series.
+En el segundo trabajo, la idea es, bueno,
+yo ya vi estos nuevos modelos,
+me mostraste modelos de ensambles,
+cómo adaptarlos,
+me mostraste modelos de redes neuronales,
+me mostraste Automatic Machine Learning,
+cómo puedo agarrar esas mismas series
+y modelizarlas y predecir con estas
+y comparar cómo me fue
+con uno y con otra.
+De alguna manera, lo que buscamos
+es que ustedes se lleven
+una forma de trabajar
+que les va a servir para el trabajo final, la tesis.
+De hecho, podrían salir
+de acá varios trabajos de tesis
+trabajando
+con la modelización
+de las series de tiempo.
+Esto lo comenté.
+La verdad que en todos estos años
+nos ha ido bastante bien
+con esta modalidad de trabajo
+de los trabajos finales.
+Buscamos que el informe tenga
+una estructura simil
+a lo que ustedes van a tener
+que presentar en su tesis final,
+con lo cual vamos a pedirle
+que tenga una estructura
+con una carátula, un ídice de contenido,
+un resumen ejecutivo
+de un 1-2 párrafo,
+una introducción, un marco metológico
+que ustedes embosan los resultados
+y una parte de conclusiones
+y, bueno, biografía,
+apartados, etc.
+Pero que tenga una estructura
+de tipo trabajo académico, pay per,
+si así quieren.
+Sé que por ahí les va,
+les por ahí no están acostumbrados
+porque en otra materia por ahí
+no laburan de esa manera, pero
+después mucha gente nos ha
+lo ha valorado
+respecto a
+el trabajo final de tesis.
+Ha visto que le ha servido
+casos como Seba
+o como Brian, después lo han empleado.
+Acá tienen varias biografías.
+Nosotros les compartimos
+un drive
+para que puedan acceder a los libros.
+Si hubiese algún problema
+o algún libro que falte
+o algo nos avisan
+y lo subimos
+no saldrá más por eso
+quizás hay algún libro que no esté
+lo compartimos.
+Pero clase a clase
+la idea es que ustedes cuenten
+con un
+pequeño viejito o algún material
+para que ustedes puedan ver de manera sincrónica.
+En general es una presentación
+que por ahí está comentada,
+cuento algo arriba o contamos algo arriba
+de esta presentación.
+Y luego en el momento sincrónico
+que es en este momento
+vamos a tener una parte teórica
+y luego una parte práctica
+donde les mostremos
+las aplicaciones de lo que veamos
+en la teoría.
+Vimos esto en la teoría
+como lo puedo trabajar en la práctica.
+¿Está bien?
+¿Hasta acá alguna consulta?
+Algo que quieran mencionar
+acá hay algo que está oculto
+y me gustaría que esté visible.
+¿Qué es esto que se llama?
+Cuestiones administrativas.
+Ahí está.
+Bien, acá hay un
+archivo
+que ahí lo deje visible.
+Lo subí pero se nota que
+cometía el error
+de
+no disponibilizarlo.
+Acá tienen nuestros correos.
+Hay que cosas nos escriben.
+¿Cuáles son los objetivos?
+Que es un poco lo que
+nosotros ya les comentamos.
+La idea es que ustedes puedan implementar estos algoritmos
+que puedan hacer pronósticos,
+comprender la problemática en la serie de tiempo.
+¿Cuáles son las diferencias
+con lo que venían trabajando anteriormente?
+Creo que en el laboratorio 1
+con de Nicolay
+no vieron
+justamente series, pero si vieron
+cuando tenían una variable
+o un dataset que estaba fechado.
+Él seguramente le ha dicho algo
+de data leakage,
+de diferenciar bien el dataset,
+de dividir bien en train
+y testing.
+Bueno, eso lo vamos a trabajar bastante.
+Acá hay una parte que es lo que
+uno esperaría del curso, que es
+aprender como una aprendería
+conectándose a la matrix.
+Y en algún momento
+posiblemente
+veamos algo de esto.
+Obviamente
+la experiencia menos ideal es
+aprender conociendo de Renault
+o Python.
+Y bueno, lo que uno tendría
+que empezar a dejar de pensar es
+en esta experiencia de aprendizaje
+y hacer los libros o el material
+sea un sufrimiento.
+La idea es que este curso
+no les ponga un palo en la rueda.
+Por eso no les vamos a tomar
+un examen choice
+que no nos va a servir
+ni a ustedes ni a nosotros
+porque la verdad que hoy en día
+cualquier algoritmo
+de GPT
+o de estos lo resuelve
+fácilmente un examen choice.
+Con lo cual los docentes
+y hay que invertir el aula de alguna manera.
+Y por eso yo creo que
+hace años venimos laborando
+en esta materia con TPS.
+Nos parece que es una manera
+que a ustedes les va a generar
+un desafío, un interés.
+Van a tener que sentar, se lo vienen
+haciendo en otras materias, pero bueno
+en nuestra forma de poder definir
+una nota de evaluación.
+Acá tienen
+cuáles son las fechas en las cuales
+vamos a entregar los TPS. Esto siempre ha sido
+una consulta reiterada.
+Entonces ya
+les indicamos que ya la semana que viene
+les tiramos la consigna
+y les
+ponemos una fecha
+27 octubre, que ya viso es mi cumpleaños.
+Es un domingo por si alguien
+me quiere saludar
+lo puede hacer.
+No hay problema, es un chiste pero digo
+el 27 es mi cumpleaños.
+No tenemos ningún problema en
+si hay un problema en un grupo
+que nos digan
+chicos necesitamos unos días más
+y bueno les damos
+unos días más de YAPA
+para que entreguen el trabajo acá.
+No somos tan estrictos, no estamos
+en el jardín de infantes retando
+a los alumnos que no entregan en fecha.
+Entendemos que la gente tiene una vida social
+que tiene otros compromisos
+y nos pasa a todos.
+Entonces acá es una fecha
+como para decir
+y ordenar el curso y decir
+entreguen acá esta fecha
+y les ponemos acá
+como fecha de entrega una semana posterior
+a la finalización del curso
+que es cuando arranca la otra materia
+como para que tengan una semana
+pero ya ni bien termina
+este TPL
+les damos la consigna del segundo.
+Esto está claro más o menos
+la idea es que sean dos trabajos
+un TPL intermedio
+donde van a evaluar modelos clásicos
+estadísticos
+y un trabajo final
+que la idea es que
+trabajando con las mismas series
+en la medida de lo posible
+ustedes utilicen
+las metodologías que van a estar viendo
+en la segunda parte.
+No sé si hay alguna consulta
+algo que quieran preguntar
+lo que sea.
+Ya nos conocen así que
+no tengan vergüenza.
+¿Son dos TPL
+o un TPL y un final?
+Son dos TPL
+los TPL
+lo hacemos llamar al último final
+pero es un TPL intermedio
+y un trabajo final.
+En algún momento Pablo
+tomábamos tres o cuatro trabajos prácticos
+y la verdad que la gente
+un poco
+se enojaba y con razón
+entonces quedó
+la idea de decir TPL intermedio
+y un trabajo final
+pero también es un TPL
+ahora quiero aclarar.
+Son dos trabajos
+un intermedio, lo llamo ITP
+para diferenciarlo y otro final
+pero son dos TPL trabajos.
+Perdón Rodrigo
+¿los dos con
+la misma estructura de
+tipo tesis?
+Sí, la idea es que hay una cantidad de carillas
+que les vamos a limitar
+que sea 20, 30 carillas como mucho
+y que ahí puedan
+condensar lo que hicieron
+obviamente después vamos a revisar el código
+vamos a ver lo que escribieron
+y un poco es para ver
+cómo interpretan los resultados
+qué conclusiones
+a veces si no llegamos a algo deseado
+también es un resultado y un hallazgo
+que hay que dejar en el trabajo
+cuando uno escriba un artículo también lo mismo
+deja esbozado
+cuáles son las limitaciones
+pero después les vamos a subir un ejemplo
+así que te voy a subir
+que haces Martín
+voy a subir uno o dos laburos
+de ejemplos como para que la estructura
+diga bueno más o menos va por acá
+pero quédense en tranquilo
+que si el primer laburo
+no llegan a los resultados
+que son los más
+deseados
+bueno no hay problema
+y el lenguaje también
+puede ser R o Python
+sí, vamos a trabajar
+nosotros con Python
+ahora bien si vos me lo querés presentar
+en R no hay ningún problema
+o sea no es que
+fuimos acomodándonos
+hace varios años hacíamos en R
+y bueno fuimos trasladando todos los códigos
+a Python
+te soy honesto
+para nosotros es indistinto
+vos hoy le pasas
+a un algoritmo de esto chachi piti
+te traduce
+el código al otro lenguaje
+de programación
+lo habrán vivenciado
+a veces me ha pasado a mi
+donde por ahí quería traspasar
+un código en R a Python
+y lo pude hacer tranquilamente
+y la verdad que en eso no hubo ningún problema
+con lo cual hacielo en el lenguaje
+que damos vos más
+que cómodo
+y manejense de la mejor manera que usted
+considera
+esta es la idea, la estructura es esta
+para que tengan las fechas
+acá les pusimos un pequeño título
+de qué vamos a estar viendo
+nos resultó bueno el año pasado
+que empezamos a incorporarlo con SEBA
+y SEBA puedes comentar que también es
+que dejamos por ahí un espacio para que trabajen en grupos
+y que ustedes por ahí empiecen a trabajar
+parte del trabajo práctico
+entonces por ahí nosotros pasamos por las aulas
+vamos viendo qué están haciendo
+por las aulas
+de ustedes
+y vemos qué están haciendo y charlamos
+y nos cuentan los problemas que están teniendo
+o también las cosas
+que quieren validar por ahí lo que estuvieron haciendo
+y por ahí en una clase de 70 personas
+se hace difícil
+entonces la idea es
+vamos a tratar de
+tener un poco más de tiempo
+de clase práctica para que ustedes puedan
+trabajar en estos espacios
+por ahí la primera clase nos acomodamos
+y ya a partir de la segunda
+empezamos a trabajar con esta lógica de
+dejamos un tiempito, 20 minutos
+o lo que fuese para pasar
+y ir charlando con ustedes
+también les parece bien hasta acá
+alguna consulta
+una consulta
+el dataset para
+hacer los trabajos prácticos tiene que tener un tamaño determinado
+una historia
+en cantidad de períodos X
+no Ariel
+en general
+hay grupos que han trabajado
+con series muy largas
+y no ha habido ningún problema
+por ahí los modelos clásicos
+los primeros te vas a dar cuenta
+que
+esa historia no es tan relevante
+y por ahí tomás muy pocos datos
+pero para los modelos
+ya para redes neuronales
+ensambles
+y Automatic Machine Learning ahí
+te aconsejo que tomes toda la historia
+y que
+utilices esa historia con otros regresores
+para tratar de
+forecastear o predecir la serie
+pero no te vamos a poner la limitación en cuanto a la cantidad de datos
+lo que sí
+tiene que ser una cantidad necesaria
+mínima como para que vos puedas
+trabajar con estos primeros modelos
+que son modelos más
+que vienen de la econometría
+de la predicción de series económicas
+tienen algunas limitaciones para series financieras
+vamos a hablar de eso también
+es decir si vos querés predecir volatilidad
+bueno estos modelos
+no son los adecuados hay que usar un modelo de volatilidad
+pero
+pero podrías
+utilizarlo para predecir
+la tasa de desempleo
